@@ -62,8 +62,8 @@ let data = [
 ]
 
 const content = document.getElementById('content');
-let round = 0
-let roundTotal = data.length
+let round = 0;
+let roundTotal = data.length;
 
 data.forEach((eachQuestion) => {
     let sectionElement = document.createElement('section');
@@ -75,11 +75,11 @@ data.forEach((eachQuestion) => {
     let divElement = document.createElement('div');
     sectionElement.appendChild(imgElement);
     sectionElement.appendChild(spanElement);
+    pElement.appendChild(pText);
     sectionElement.appendChild(pElement);
-    pElement.appendChild(pText)
     content.appendChild(sectionElement);
 
-    round++
+    round++;
     spanElement.innerHTML = `${round}/${roundTotal}`;
 
     eachQuestion.choice.forEach(answerBtn => {
@@ -88,7 +88,7 @@ data.forEach((eachQuestion) => {
         sectionElement.appendChild(divElement);
         buttonElement.innerHTML = answerBtn;
 
-        buttonElement.addEventListener('click', (e) => {
+        buttonElement.addEventListener('click', function () {
             if (answerBtn == eachQuestion.answer) {
                 buttonElement.classList.add("green");
             } else {
@@ -97,7 +97,3 @@ data.forEach((eachQuestion) => {
         })
     })
 })
-
-
-
-
