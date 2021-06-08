@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Molengo&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #0D3526;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+img {
+    border-radius: 5px;
+}
+span {
+    color: #fff;
+    margin-top: 20px;
+    animation: glow 3s linear infinite;
+}
+@keyframes glow  {
+    20%,100%
+    {
+    color: yellow;
+    text-shadow: none;
+    }
+    20%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #C7FF33,
+        0 0 30px #C7FF33,
+        0 0 70px #C7FF33,
+        0 0 120px #C7FF33,
+        0 0 180px #C7FF33
+    }
+}
+p {
+    font-family: 'Molengo', sans-serif;
+    font-size: 1.3em;
+    color: #fff;
+    padding: 15px 0;
+}
+button {
+    font-family: 'Molengo', sans-serif;
+    text-transform: uppercase;
+    background-color: #E8AD73;
+    color: #0D3526;;
+    border: none;
+    border-radius: 5px;
+    width: 120px; 
+    height: 35px; 
+    margin: 10px; 
+    cursor: pointer;
+}
+button:hover {
+    color: #fff;
+    opacity: 0.8;
+    transition-duration: 0.4s;
+}
+section div {
+    display: flex;
+    justify-content: space-around;
+}
+.green {
+    background: green;
+}
+.red {
+    background: red;
+}  
